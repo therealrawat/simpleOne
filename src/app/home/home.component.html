@@ -1,0 +1,30 @@
+<div style="min-width: 70%;">
+        <h1 class="text-center">BLOG75WEBSITE</h1>
+
+        <div class="text-center m-5">
+                <button routerLink="/newblog" mat-raised-button color="primary">+ Add New post</button> &nbsp;
+                <!-- <a routerLink="" mat-stroked-button color="accent">Back to Home</a> -->
+        </div>
+
+
+        <div>
+                <ng-container *ngFor="let element of bloglist">
+                        <mat-card class="mb-2">
+                                <mat-card-header>
+                                        <mat-card-title>{{element.title}}</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                        <p style="color: #555;">{{ getLimitedWords(element.article, 30) }}</p>
+                                        
+                                        <button (click)="goToBlog(element.id)" mat-button color="primary">Read more</button>
+                                </mat-card-content>
+                                <mat-card-actions align="end">
+                                        <button mat-button>{{element.author}}</button>
+                                        <em mat-button>{{element.date}}</em>
+                                </mat-card-actions>
+                        </mat-card>
+                </ng-container>
+
+        </div>
+
+</div>

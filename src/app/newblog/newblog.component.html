@@ -1,0 +1,33 @@
+
+
+        <form class="example-form" [formGroup]="blogForm" (ngSubmit)="submitBlog(blogForm)">
+            
+            <mat-form-field class="w-100" >
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title">
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field class="w-100">
+                <mat-label>Author</mat-label>
+                <input matInput formControlName="author">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="w-100">
+                <mat-label>Category</mat-label>
+                <input matInput formControlName="category">
+            </mat-form-field><br>
+
+            <mat-form-field style="width: 80vw;">
+                <mat-label>Article</mat-label>
+                <textarea style="height: 100vh;" matInput formControlName="article"></textarea>
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button color="primary">Submit</button> &nbsp;
+                <a routerLink="/blog" mat-stroked-button color="primary">Cancel</a>
+            </div>
+
+        </form>

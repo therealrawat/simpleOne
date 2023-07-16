@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-header>
+        <h1>Verify Blog Status</h1>
+    </mat-card-header>
+    <mat-card-content>
+
+        <form [formGroup]="blogFormUpdate" (ngSubmit)="updateBlogStatus()">
+
+            <mat-form-field class="example-full-width">
+
+                <mat-label>Blog Status</mat-label>
+                <mat-select formControlName="status">
+                    <mat-option *ngFor="let item of blogStatus" [value]="item.name">
+                        {{item.name}}
+                    </mat-option>
+                </mat-select>
+                
+            </mat-form-field>
+
+            <!-- <div>
+                <mat-checkbox formControlName="isactive">Is Active</mat-checkbox>
+            </div> -->
+            <div>
+                <button mat-raised-button color="primary">Confirm Status</button> &nbsp;
+                <a mat-dialog-close mat-raised-button color="accent">Cancel</a>
+            </div>
+
+        </form>
+
+    </mat-card-content>
+</mat-card>
