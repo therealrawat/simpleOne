@@ -1,0 +1,38 @@
+<!-- component1.component.html -->
+<!-- <div>
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" [(ngModel)]="phoneNumber" placeholder="Phone Number">
+  </div>
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="name" placeholder="Name">
+  </div>
+  <div>
+    <label for="time">Time:</label>
+    <input id="time" [(ngModel)]="time" placeholder="Time">
+  </div>
+  <div>
+    <label for="date">Date:</label>
+    <input id="date" [(ngModel)]="date" placeholder="Date">
+  </div>
+  <button (click)="submitComponent1()">Next</button>
+   -->
+
+   <div class="input-container">
+    <mat-form-field class="input-field">
+      <input matInput [(ngModel)]="phoneNumber" placeholder="Phone Number" />
+    </mat-form-field>
+    <mat-form-field class="input-field">
+      <input matInput [(ngModel)]="name" placeholder="Name" />
+    </mat-form-field>
+    <mat-form-field class="input-field">
+      <input matInput [(ngModel)]="date" [matDatepicker]="picker" placeholder="Date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="input-field">
+      <input matInput [(ngModel)]="time" placeholder="Time" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="submitComponent1()">Submit</button>
+
+  </div>

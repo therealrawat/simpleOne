@@ -1,0 +1,9 @@
+<!-- component2.component.html -->
+<div>
+    <label for="boardingStation">Boarding Station:</label>
+    <select id="boardingStation" [(ngModel)]="boardingStation">
+      <option *ngFor="let station of boardingStations" [value]="station">{{station}}</option>
+    </select>
+  </div>
+  <button (click)="submitComponent2()">Next</button>
+  
