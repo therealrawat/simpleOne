@@ -1,8 +1,0 @@
-
-  <!-- component3.component.html -->
-<div *ngFor="let meal of mealOptions">
-    <input type="radio" name="meal" [(ngModel)]="selectedMeal" [value]="meal">
-    <label>{{meal.name}} - {{meal.price}} - {{meal.description}}</label>
-  </div>
-  <button (click)="submitComponent3()">Submit</button>
-  
