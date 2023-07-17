@@ -1,0 +1,12 @@
+<div class="color-bule p-4">
+    <div>
+        <label class="label" for="boardingStation">Select Boarding Station</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <select id="boardingStation" [(ngModel)]="boardingStation">
+            <option *ngFor="let station of boardingStations" [value]="station">{{station}}</option>
+        </select>
+    </div>
+    <br>
+    <button [disabled]="!boardingStation"  mat-raised-button color="primary" (click)="submitMealComponent()">Select Meal</button>
+</div>
+

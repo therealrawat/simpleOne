@@ -1,0 +1,11 @@
+<div class="color-bule p-4">
+    <h1>Order Delicious Food on Trains Online</h1>
+    <h3>Book Food @ <span class="accent-btn p-1">Zero</span> Booking Fee</h3>
+ 
+    <div *ngFor="let meal of mealOptions">
+        <input type="radio" name="meal" [(ngModel)]="selectedMeal" [value]="meal">
+        <label>&nbsp;&nbsp;&nbsp;&nbsp;{{meal.foodName}}&nbsp;&nbsp;&nbsp;&nbsp; {{meal.description}} &nbsp;&nbsp; <button mat-raised-button color="warn">₹{{meal.price}}</button> </label>
+    </div>
+    <br>
+    <button [disabled]="!selectedMeal" mat-raised-button color="accent"  (click)="submitMealComponent()">Place Order</button>
+</div> 

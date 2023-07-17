@@ -1,0 +1,14 @@
+#boardingStation {
+    width: 120px;
+    background: #fff;
+    height: 40px;
+    border: none;
+    border-bottom: 2pt #898989 solid;
+}
+.label{
+    display: inline-flex;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 100%;
+    color: #555;
+}

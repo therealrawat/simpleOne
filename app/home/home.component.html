@@ -1,0 +1,35 @@
+<div class="color-bule p-4">
+    <h1>Book Trains Online Faster</h1>
+    <h3>*Book @ <span class="accent-btn p-1">Zero</span> Booking Fee</h3>
+    <div class="container bg-white" >
+
+        <mat-form-field #mno class="me-4" appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input minlength="10" maxlength="10" matInput [(ngModel)]="mobileNo" appNumberonly />
+            <mat-icon matSuffix>settings_phone</mat-icon>
+            <mat-error *ngIf=" !mobileNo">Error</mat-error>
+        </mat-form-field>
+
+        <mat-form-field #tno class="me-4" appearance="outline">
+            <mat-label>Train Number</mat-label>
+            <input maxlength="15" matInput [(ngModel)]="trainNo" appNumberonly />
+        </mat-form-field>
+
+        <mat-form-field #dod class="me-4" appearance="outline">
+            <mat-label>Date Of Departure</mat-label>
+            <input matInput [(ngModel)]="journeyDate" [matDatepicker]="picker" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field #tod class="me-4" appearance="outline">
+            <mat-label>Time of Departure</mat-label>
+            <input type="time" maxlength="10" matInput [(ngModel)]="time" />
+            <mat-icon matSuffix>alarm</mat-icon>
+            <mat-hint>hh:mm</mat-hint>
+        </mat-form-field>
+        <br>
+        <button [disabled]="!time && !mobileNo && !trainNo && !journeyDate" mat-raised-button color="primary" (click)="submitHomeComponent()">Confirm Train</button>
+
+    </div>
+</div>
